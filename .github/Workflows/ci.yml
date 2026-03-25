@@ -14,4 +14,4 @@ jobs:
       uses: actions/Checkout@v3
 
     - name: Run a simple command
-      run: echo "I need to become good developer in software field"
+      run: echo "I need to become good Bioinformatician"
