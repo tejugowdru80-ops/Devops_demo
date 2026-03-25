@@ -1,17 +1,15 @@
-name: Simple CI Pipeline
-
+name: Simple CI pipeline
 on:
   push:
-    branches: ["main"]
-
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v3
 
-
-  steps:
-    - name: Checkout repository
-      uses: actions/Checkout@v3
-
-    - name: Run a simple command
-      run: echo "I need to become good Bioinformatician."
+      - name: Run a simple command
+        run:  echo "Hello, World!"
